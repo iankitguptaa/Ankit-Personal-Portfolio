@@ -29,8 +29,6 @@ Dark theme, parallax hero, an orbiting tech-stack section and a one-click accent
 ## Getting started
 
 ```bash
-git clone https://github.com/iankitguptaa/Ankit-Personal-Portfolio.git
-cd Ankit-Personal-Portfolio
 npm install
 npm run dev
 ```
