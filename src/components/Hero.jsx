@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { FileText, Briefcase } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 const DESKTOP_QUERY = '(min-width: 769px)';
+const ROLES = ['Full-Stack', 'Software'];
 
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = useState(() => window.matchMedia(DESKTOP_QUERY).matches);
@@ -19,6 +20,12 @@ function useIsDesktop() {
 export default function Hero({ scrollTo }) {
   const heroRef = useRef(null);
   const isDesktop = useIsDesktop();
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setRoleIndex((i) => (i + 1) % ROLES.length), 2800);
+    return () => clearInterval(t);
+  }, []);
 
   // Scroll-linked parallax layers (desktop only), smoothed for a "scrub" lag.
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
@@ -146,7 +153,21 @@ export default function Hero({ scrollTo }) {
             MCA Student
           </p>
           <p className="font-heading text-4xl lg:text-6xl font-black uppercase leading-[0.95] text-[var(--cream)] m-0">
-            Full-Stack<br />Developer
+            <span className="block overflow-hidden h-[0.95em]">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={ROLES[roleIndex]}
+                  className="block"
+                  initial={{ y: '100%', opacity: 0 }}
+                  animate={{ y: '0%', opacity: 1 }}
+                  exit={{ y: '-100%', opacity: 0 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  {ROLES[roleIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
+            Developer
           </p>
         </motion.div>
       </motion.div>
