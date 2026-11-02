@@ -3,7 +3,7 @@
 A fast, animated, fully responsive developer portfolio built with React, Vite and Tailwind CSS.
 Dark theme, parallax hero, an orbiting tech-stack section and a one-click accent colour switcher.
 
-**Live site:** https://ankit-portfolio-three-woad.vercel.app/
+**Live site:** https://ankit-personal-portfolio.vercel.app/
 
 ## Sections
 
