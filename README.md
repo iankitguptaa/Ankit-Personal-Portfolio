@@ -26,21 +26,6 @@ Dark theme, parallax hero, an orbiting tech-stack section and a one-click accent
 | Icons | lucide-react, react-icons |
 | Hosting | Vercel |
 
-## Getting started
-
-```bash
-npm install
-npm run dev
-```
-
-Other scripts:
-
-```bash
-npm run build     # production build into dist/
-npm run preview   # serve the production build locally
-npm run lint      # run ESLint
-```
-
 ## Project structure
 
 ```
