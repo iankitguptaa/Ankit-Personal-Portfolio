@@ -152,6 +152,32 @@ export const SKILLS_CATEGORIES = [
 
 export const PROJECTS = [
   {
+    id: "renteasee",
+    title: "RentEasee",
+    category: "Web Development",
+    description: "Rental platform to discover verified apartments, independent villas, and co-living spaces across India with zero brokerage.",
+    longDescription: "RentEasee helps users discover verified luxury apartments, independent villas, and managed co-living spaces across India with zero brokerage, wrapped in a clean, responsive interface and deployed on Vercel.",
+    tags: ["React", "JavaScript", "CSS", "Vercel"],
+    image: "/projects/renteasee.png",
+    github: "https://github.com/iankitguptaa/RentEasee",
+    demo: "https://renteasee-six.vercel.app/",
+    featured: true,
+    gradient: "from-rose-500 to-red-600"
+  },
+  {
+    id: "restaurant",
+    title: "Restaurant Website",
+    category: "Full Stack",
+    description: "A complete, production-ready food delivery platform built from scratch with a stunning, interactive UI powered by a real backend.",
+    longDescription: "I challenged myself to build a complete, production-ready food delivery platform from scratch. I wanted to go beyond a simple frontend mockup and build something that looks stunning, feels interactive, and is powered by a real backend.",
+    tags: ["React", "Express", "REST API", "Vercel"],
+    image: "/projects/restaurant-biteroute.png",
+    github: "https://github.com/iankitguptaa/Restaurant-Website",
+    demo: "https://restaurant-website-zeta-ruby.vercel.app/",
+    featured: true,
+    gradient: "from-amber-500 to-orange-600"
+  },
+  {
     id: "lung-cancer",
     title: "Lung Cancer Prediction",
     category: "Machine Learning",
@@ -189,32 +215,6 @@ export const PROJECTS = [
     demo: "https://student-portfolio-website-react.vercel.app/",
     featured: false,
     gradient: "from-blue-500 to-indigo-600"
-  },
-  {
-    id: "restaurant",
-    title: "Restaurant Website",
-    category: "Full Stack",
-    description: "A complete, production-ready food delivery platform built from scratch with a stunning, interactive UI powered by a real backend.",
-    longDescription: "I challenged myself to build a complete, production-ready food delivery platform from scratch. I wanted to go beyond a simple frontend mockup and build something that looks stunning, feels interactive, and is powered by a real backend.",
-    tags: ["React", "Express", "REST API", "Vercel"],
-    image: "/projects/restaurant-biteroute.png",
-    github: "https://github.com/iankitguptaa/Restaurant-Website",
-    demo: "https://restaurant-website-zeta-ruby.vercel.app/",
-    featured: true,
-    gradient: "from-amber-500 to-orange-600"
-  },
-  {
-    id: "renteasee",
-    title: "RentEasee",
-    category: "Web Development",
-    description: "Rental platform to discover verified apartments, independent villas, and co-living spaces across India with zero brokerage.",
-    longDescription: "RentEasee helps users discover verified luxury apartments, independent villas, and managed co-living spaces across India with zero brokerage, wrapped in a clean, responsive interface and deployed on Vercel.",
-    tags: ["React", "JavaScript", "CSS", "Vercel"],
-    image: "/projects/renteasee.png",
-    github: "https://github.com/iankitguptaa/RentEasee",
-    demo: "https://renteasee-six.vercel.app/",
-    featured: true,
-    gradient: "from-rose-500 to-red-600"
   }
 ];
 
