@@ -120,11 +120,18 @@ h1, h2, h3, h4 { font-family: var(--font-heading); }
 
 @media (max-width: 860px) {
   .section { padding: 80px 0; }
-  .accordion { flex-direction: column; height: auto; }
-  .acc-item { flex: none; height: 84px; transition: height 600ms var(--ease); }
-  .acc-item.active { height: 480px; }
-  .acc-vert { writing-mode: horizontal-tb; rotate: 0deg; left: 70px; bottom: auto; top: 30px; transform: none; }
-  .acc-details { padding: 22px; }
+  /* On phones the accordion becomes a simple stack of project cards. */
+  .accordion { flex-direction: column; height: auto; gap: 18px; }
+  .acc-item, .acc-item.active { flex: none; display: flex; flex-direction: column; cursor: default; transition: none; }
+  .acc-item::after { display: none; }
+  .acc-bg, .acc-item.active .acc-bg { position: relative; inset: auto; height: 190px; flex-shrink: 0; opacity: 1; transform: none; }
+  .acc-num { z-index: 3; top: 14px; left: 14px; }
+  .acc-vert { display: none; }
+  .acc-details, .acc-item.active .acc-details {
+    position: relative; opacity: 1; transform: none; pointer-events: auto; transition: none; padding: 22px;
+    background: linear-gradient(180deg, rgba(3, 3, 5, 0.2), rgba(3, 3, 5, 0.9));
+  }
+  .acc-details h3 { font-size: 1.5rem; }
 }
 
 /* ---------- Form ---------- */
