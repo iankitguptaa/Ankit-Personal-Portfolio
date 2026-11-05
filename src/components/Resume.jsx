@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, ExternalLink } from 'lucide-react';
 
-const RESUME_URL = '/ANKIT_KUMAR_RESUME.pdf';
+// ?v= busts browser/CDN caches when the PDF is replaced; bump it with each new resume.
+const RESUME_URL = '/ANKIT_KUMAR_RESUME.pdf?v=2';
 
 export default function Resume() {
   return (
